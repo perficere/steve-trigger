@@ -1,0 +1,21 @@
+service: steve
+
+provider:
+  name: aws
+  runtime: python3.8
+  lambdaHashingVersion: 20201221
+  region: ${env:AWS_REGION}
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    pythonBin: python3
+
+functions:
+  trigger:
+    handler: src.trigger
+    description: Sends a POST request to /arbitrage/attempt-trade.
+    events:
+      - schedule: rate(2 minute)

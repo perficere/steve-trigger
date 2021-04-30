@@ -1,0 +1,9 @@
+# Begin by ignoring everything (just in case).
+*
+
+# Include build files.
+!package.json
+!package-lock.json
+
+# Include Node modules.
+!node_modules/

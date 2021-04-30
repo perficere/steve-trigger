@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "steve"
+version = "1.0.0"
+description = "Latam’s first prize-linked savings account."
+authors = [
+  "Alex Apt <aapt@uc.cl>",
+  "Ariel Martínez <ariel@martinezs.dev>",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.9"
+requests = "^2.25.1"
+sentry-sdk = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+flake8 = "^3.9.0"
+isort = "^5.7.0"
+
+[tool.black]
+line-length = 90
+target-version = ["py36", "py37", "py38"]
+exclude = '/(\.venv)/'
+
+[build-system]
+requires = ["poetry>=1.0.3"]
+build-backend = "poetry.masonry.api"

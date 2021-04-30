@@ -1,0 +1,17 @@
+# Python.
+__pycache__
+
+# Node.
+node_modules
+
+# macOS.
+.DS_Store
+
+# Virtual environment.
+.venv
+
+# Secrets.
+local.py
+
+# Serverless.
+.serverless
