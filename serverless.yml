@@ -18,4 +18,4 @@ functions:
     handler: src.trigger
     description: Sends a POST request to /trigger.
     events:
-      - schedule: rate(2 minute)
+      - schedule: rate(2 minutes)
