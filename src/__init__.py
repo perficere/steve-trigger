@@ -4,9 +4,9 @@ from sentry_sdk.integrations.serverless import serverless_function
 
 import env
 
-from .run import main as run
+from .trigger import main as trigger
 
 sentry_sdk.init(dsn=env.SENTRY_DSN, integrations=[AwsLambdaIntegration(timeout_warning=True)], environment=env.STAGE)
 
 
-run = serverless_function(run)
+trigger = serverless_function(trigger)
