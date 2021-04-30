@@ -16,6 +16,6 @@ custom:
 functions:
   trigger:
     handler: src.trigger
-    description: Sends a POST request to /arbitrage/trigger.
+    description: Sends a POST request to /trigger.
     events:
       - schedule: rate(2 minute)
