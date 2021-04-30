@@ -18,7 +18,9 @@ def get_response_data(response: Response):
     if response.ok:
         return response.json() if response.text else ""
 
-    raise RequestException(f"Request to '{response.url}' failed" f" with status code {response.status_code}.")
+    raise RequestException(
+        f"Request to '{response.url}' failed" f" with status code {response.status_code}."
+    )
 
 
 def api_request(method: str, path: str = "", headers: dict = {}):
@@ -35,6 +37,7 @@ def as_handler(func):
     """
     Converts a function that calls an API into a simple serverless handler.
     """
+
     def wrapper(*args, **kwargs):
         response = func(*args, **kwargs)
         data = get_response_data(response)

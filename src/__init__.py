@@ -6,7 +6,11 @@ import env
 
 from .trigger import main as trigger
 
-sentry_sdk.init(dsn=env.SENTRY_DSN, integrations=[AwsLambdaIntegration(timeout_warning=True)], environment=env.STAGE)
+sentry_sdk.init(
+    dsn=env.SENTRY_DSN,
+    integrations=[AwsLambdaIntegration(timeout_warning=True)],
+    environment=env.STAGE,
+)
 
 
 trigger = serverless_function(trigger)
