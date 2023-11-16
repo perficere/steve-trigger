@@ -25,7 +25,7 @@ def get_response_data(response: Response):
 
 def api_request(method: str, path: str = "", headers: dict = {}):
     """
-    Encapsulates the logic of a simple request to Con Yappa’s API.
+    Encapsulates the logic of a simple request.
     """
     url = f"{env.API_BASE_URL}{path}"
     headers = {**DEFAULT_HEADERS, **headers}
